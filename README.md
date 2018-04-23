@@ -1,7 +1,15 @@
 # NLP
 
-This project is for finding meaningful words in a list of anagrams of a given word.
+Requirements:
 
-For executing just simply click un run button.
+Please install the following package:
+  
+  pip install persian_wordcloud
+  
+In order to execute and see the results please check the example folder and run the word_map.py file.
+The pictures and the datasets are also included in the folder mentioned earlier.
 
-Recursive function is used for finding anagrams.
+
+Subject used for Task2:
+
+Comparing the poems of 2 famous poets named Sohrab Sepehri and Fereidun Moshiri.

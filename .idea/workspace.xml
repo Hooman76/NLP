@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d0a9754-ff8e-4bde-96dd-8614c44e9ba1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/prediction.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/predictor.vw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/vowpal_test.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/vowpal_train.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/vowpal.py" afterPath="$PROJECT_DIR$/example/vowpal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/predictor.vw" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/prediction.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

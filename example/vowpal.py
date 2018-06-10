@@ -31,8 +31,6 @@ for line in test_sohrab:
     if line != "\n":
         sohrab_test.append(line)
 
-print(moshiri_test)
-
 test_moshiri.close()
 test_sohrab.close()
 
@@ -63,3 +61,51 @@ if os.stat("vowpal_test.txt").st_size == 0:
             break
 
 vowpal_test.close()
+
+
+res = open("prediction.txt", "r")
+counter = 0
+moshiri_pred = []
+sohrab_pred = []
+for line in res:
+    if counter%2 == 0:
+        if float(line)<0:
+            moshiri_pred.append(-1)
+        else:
+            moshiri_pred.append(1)
+    else:
+        if float(line)>0:
+            sohrab_pred.append(1)
+        else:
+            sohrab_pred.append(-1)
+    counter+=1
+
+true_moshiri = 0
+true_sohrab = 0
+
+for item in moshiri_pred:
+    if item == -1:
+        true_moshiri += 1
+
+for item in sohrab_pred:
+    if item == 1:
+        true_sohrab += 1
+
+accuracy_moshiri = true_moshiri/(len(sohrab_pred)+len(moshiri_pred))
+accuracy_sohrab = true_sohrab/(len(sohrab_pred)+len(moshiri_pred))
+
+precision_moshiri = true_moshiri/len(moshiri_pred)
+precision_sohrab = true_sohrab/len(sohrab_pred)
+
+recall_moshiri = true_moshiri/(len(sohrab_pred) - true_sohrab + true_moshiri)
+recall_sohrab = true_sohrab/(len(moshiri_pred) - true_moshiri + true_sohrab)
+
+print("sohrab results: ")
+print("sohrab accuracy:" + str(accuracy_sohrab))
+print("sohrab precision:" + str(precision_sohrab))
+print("sohrab recall:" + str(recall_sohrab) + "\n")
+
+print("moshiri results: ")
+print("moshiri accuracy:" + str(accuracy_moshiri))
+print("moshiri precision:" + str(precision_moshiri))
+print("moshiri recall:" + str(recall_moshiri))

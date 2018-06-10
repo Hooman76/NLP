@@ -46,7 +46,6 @@ for line in test_sohrab:
             prob_per_word_m.append(1/(vocab_size + 9510))
     if len(prob_per_word_s) >= 2:
         prob_s = reduce(lambda x, y: x*y, prob_per_word_s) * p_sohrab
-        #print(prob_s)
     elif len(prob_per_word_s) == 1:
         prob_s = prob_per_word_s[0] * p_sohrab
     if len(prob_per_word_m) >= 2:
@@ -55,7 +54,6 @@ for line in test_sohrab:
         prob_m = prob_per_word_m[0] * p_moshiri
     if prob_s > prob_m:
         count_correct_s += 1
-        #print("sohrab was guessed correctly")
 
 prob_s = 0
 prob_m = 0
@@ -85,7 +83,6 @@ for line in test_moshiri:
         prob_m = prob_per_word_m[0] * p_moshiri
     if prob_m > prob_s:
         count_correct_m += 1
-        #print("moshiri was guessed correctly")
 
 sohrab_recall = float(count_correct_s/count_all_s)
 moshiri_recall = float(count_correct_m/count_all_m)

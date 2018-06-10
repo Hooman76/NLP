@@ -42,7 +42,7 @@ vowpal_test = open("vowpal_test.txt", "a", encoding='utf-8')
 if os.stat("vowpal_train.txt").st_size == 0:
     for i in range(len(moshiri_list) - 1):
         if i < len(sohrab_list):
-            line = str("0 | " + moshiri_list[i])
+            line = str("-1 | " + moshiri_list[i])
             vowpal_train.write(line)
             line1 = str("1 | " + sohrab_list[i])
             vowpal_train.write(line1)
@@ -55,7 +55,7 @@ vowpal_train.close()
 if os.stat("vowpal_test.txt").st_size == 0:
     for i in range(len(moshiri_test) - 1):
         if i < len(sohrab_test):
-            line = str("0 | " + moshiri_test[i])
+            line = str("-1 | " + moshiri_test[i])
             vowpal_test.write(line)
             line1 = str("1 | " + sohrab_test[i])
             vowpal_test.write(line1)
